@@ -15,35 +15,35 @@ int main() {
 	bool chosen = false;
 	do {
 		cin >> choice;
-		if ((choice != 1) && (choice != 2) && (choice != 3) && (choice != 4) && (choice != 5)) {
-			cout << "'" + to_string(choice) + "' is not an option. Please choose again.\n" << endl;
-		}
-		else {
-			if (choice == 1) {
-				string(60, '\n');
-				palindrome();
-				chosen = true;
-			}
-			else if (choice == 2) {
-				string(60, '\n');
-				gridMover();
-				chosen = true;
-			}
-			else if (choice == 3) {
-				string(60, '\n');
-				ticTacToe();
-				chosen = true;
-			}
-			else if (choice == 4) {
-				string(60, '\n');
-				binaryConverter();
-				chosen = true;
-			}
-			else {
-				string(60, '\n');
-				fileReader();
-				chosen = true;
-			}
+		switch (choice) {
+		case 1:
+			string(60, '\n');
+			palindrome();
+			chosen = true;
+			break;
+		case 2:
+			string(60, '\n');
+			gridMover();
+			chosen = true;
+			break;
+		case 3:
+			string(60, '\n');
+			ticTacToe();
+			chosen = true;
+			break;
+		case 4:
+			string(60, '\n');
+			binaryConverter();
+			chosen = true;
+			break;
+		case 5:
+			string(60, '\n');
+			fileReader();
+			chosen = true;
+			break;
+		default:
+			cout << "'" << choice << "' is not an option. Please choose again.\n" << endl;
+			break;
 		}
 	} while (chosen == false);
 	return 0;
