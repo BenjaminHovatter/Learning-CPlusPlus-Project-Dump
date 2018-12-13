@@ -3,15 +3,17 @@
 #include <string>
 
 using namespace std;
+
 int ticTacToe();
 int palindrome();
 int binaryConverter();
 int gridMover();
 int fileReader();
+int linkedList();
 
 int main() {
 	int choice;
-	cout << "Welcome to the Project1 menu. Choose a program to run:\nPalindrome: 1 || Grid Mover: 2 || Tic Tac Toe: 3 || Binary Converter: 4 || FIle Reader: 5\n" << endl;
+	cout << "Welcome to the Project1 menu. Choose a program to run:\nPalindrome: 1 || Grid Mover: 2 || Tic Tac Toe: 3 || Binary Converter: 4 || File Reader: 5 || Linked List Maker: 6\n" << endl;
 	bool chosen = false;
 	do {
 		cin >> choice;
@@ -39,6 +41,11 @@ int main() {
 		case 5:
 			string(60, '\n');
 			fileReader();
+			chosen = true;
+			break;
+		case 6:
+			string(60, '\n');
+			linkedList();
 			chosen = true;
 			break;
 		default:
