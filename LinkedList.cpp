@@ -19,7 +19,6 @@ private:
 	Node *current = NULL;
 	Node *head = NULL;
 	Node *temp = NULL;
-	Node *newNode = NULL;
 
 public:
 
@@ -105,7 +104,14 @@ public:
 
 		return;
 	}
+
+	//merges a passed list into the existing list.
+	//void merge(LinkedList list2) {
+
+//	}
 };
+
+
 
 
 int linkedList() {
